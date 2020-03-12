@@ -1,0 +1,36 @@
+---
+title: "Wrangle Glasshouse data"
+author: "P. Melloy"
+date: "13/03/2020"
+output: html_document
+---
+```{r import_libraries}
+library("tidyverse")
+
+```
+
+
+## Import data
+This needs to be changed so it imports from figshare
+```{r import_data}
+datFCR <- read_csv("data/1301_FCRatElevatedCO2_Glasshouse_figshare_RAW_PM.csv")
+
+datFCR
+```
+
+### Explaination of data
+
+   1. ID:     Relates to a single plant in a single pot.  
+   2. cul:    Wheat genotype, or commercial cultivar name.  
+   3. inoc:   When or if the pot/plant was inoculated; 
+      i) None - noninoculated  
+      ii) 21 days - inoculated at 21 days after planting  
+      iii) Late Tillering - inoculated late in the the wheat maturity stage 'Tillering' prior to stem elongation.  
+   4. rep:    Biological replicates
+   5. sT:     Sampling stage, refers to when the plant was destructivley sampled for analysis.  
+      i) 1 - Initiating of stem elongation, zadocks maturity stage XXX
+      i) 2 - Flowering, zadocks maturity stage XXX
+      i) 3 - Soft dough, zadocks maturity stage XXX
+      i) 4 - Crop maturity, zadocks maturity stage XXX
+   
+   
