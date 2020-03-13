@@ -9,13 +9,14 @@ library("tidyverse")
 library("skimr")
 ```
 
+If you are using this data please reference the original work and the data. BibTex files located in the `ref/` directory.
 
 ## Import data
-This needs to be changed so it imports from figshare
-```{r import_data}
-dat_rb <- read_csv("https://ndownloader.figshare.com/files/21990354")
+First lets import the visual assessment data from figshare.
+```{r import_symptom&phenology_data}
+dat_fcr <- read_csv("https://ndownloader.figshare.com/files/21990357")
 
-skim(dat_rb)
+skim(dat_fcr)
 ```
 
 ### Explaination of data
@@ -33,4 +34,16 @@ skim(dat_rb)
       i) 3 - Soft dough, zadocks maturity stage XXX
       i) 4 - Crop maturity, zadocks maturity stage XXX
    
+
+Lets also import the relative fungal biomass data from figshare.
+```{r import_fungalBiomass_data}
+dat_rb <- read_csv("https://ndownloader.figshare.com/files/21990354")
+
+skim(dat_rb)
+```
+
+
+
+
+
    
