@@ -6,16 +6,16 @@ output: html_document
 ---
 ```{r import_libraries}
 library("tidyverse")
-
+library("skimr")
 ```
 
 
 ## Import data
 This needs to be changed so it imports from figshare
 ```{r import_data}
-datFCR <- read_csv("data/1301_FCRatElevatedCO2_Glasshouse_figshare_RAW_PM.csv")
+dat_rb <- read_csv("https://ndownloader.figshare.com/files/21990354")
 
-datFCR
+skim(dat_rb)
 ```
 
 ### Explaination of data
