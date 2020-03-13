@@ -24,21 +24,53 @@ skim(dat_fcr)
    1. ID:     Relates to a single plant in a single pot.  
    2. cul:    Wheat genotype, or commercial cultivar name.  
    3. inoc:   When or if the pot/plant was inoculated; 
-      i) None - noninoculated  
-      ii) 21 days - inoculated at 21 days after planting  
-      iii) Late Tillering - inoculated late in the the wheat maturity stage 'Tillering' prior to stem elongation.  
+      i) **None** - noninoculated  
+      ii) **21 days** - inoculated at 21 days after planting  
+      iii) **Late Tillering** - inoculated late in the the wheat maturity stage 'Tillering' prior to stem elongation.  
    4. rep:    Biological replicates
    5. sT:     Sampling stage, refers to when the plant was destructivley sampled for analysis.  
-      i) 1 - Initiating of stem elongation, zadocks maturity stage XXX
-      i) 2 - Flowering, zadocks maturity stage XXX
-      i) 3 - Soft dough, zadocks maturity stage XXX
-      i) 4 - Crop maturity, zadocks maturity stage XXX
+      i) **1** - Initiating of stem elongation, zadocks maturity stage XXX
+      ii) **2** - Flowering, zadocks maturity stage XXX
+      iii) **3** - Soft dough, zadocks maturity stage XXX
+      iv) **4** - Crop maturity, zadocks maturity stage XXX
+   6. treat: The glasshouse treatments which varied temperature and CO2.
+      i) **1** - Ambient CO2 (380ppm), cool growing temperatures.
+      ii) **2** - Elevated CO2 (700ppm), cool growing temperatures.
+      iii) **3** - Elevated CO2 (700ppm), warm growing temperatures.
+   7. **das31** - Zadocks plant maturity at 31 days after planting.
+   8. **das38** - Zadocks plant maturity at 38 days after planting.
+   9. **das45** - Zadocks plant maturity at 45 days after planting.
+   10. **das52** - Zadocks plant maturity at 52 days after planting.
+   11. **das58** - Zadocks plant maturity at 58 days after planting.
+   12. **das64** - Zadocks plant maturity at 64 days after planting.
+   13. **das71** - Zadocks plant maturity at 71 days after planting.
+   14. **das78** - Zadocks plant maturity at 78 days after planting.
+   15. **das85** - Zadocks plant maturity at 85 days after planting.
+   16. **das92** - Zadocks plant maturity at 92 days after planting.
+   17. **das99** - Zadocks plant maturity at 99 days after planting.
+   18. **das106** - Zadocks plant maturity at 106 days after planting.
+   19. **das113** - Zadocks plant maturity at 113 days after planting.
+   20. **das120** - Zadocks plant maturity at 120 days after planting.
+   21. **isb** - index of stem browning, $\overline{x}_{b/h}$ where $b =$ FCR stem browning, and $h=$ height of the same wheat tiller.
+   22. **das** - Days after sowing when the plants were destructivley sampled.
+   23. **sam_mat** - Zadocks maturity at sampling.
+   24. **total_LA** - total plant leaf area.
+   25. **FL_LA** - Flagleaf area
+   26. **2nd_LA** - Leaf area of the secondary leaf, below the flag leaf.
+   27. **sam_SPAD** - SPAD measurement at sampling.
+   28. **total_dw** - Total above ground dry weight of plant sampling.
+   29-38. **h1-b10** - Plant tiller height of tiller. number of tillers varied per plant NA values input where there were less than 10
+   39-48. **b1-b10** - length of FCR browning on the respective h# tiller.
+   49-58. **i1-i10** - index of browning ($b/h$) of the respective h & b tillers.
+   59. **DNAext** - Reference relating to the DNA extraction rep.
+   60. **DNAconc** - Quantity of DNA (260/280) from DNA extraction.
+   61. **WACT** - QPCR measurement of wheat actin gene loci quantity
    
 
 Lets also import the relative fungal biomass data from figshare.
 ```{r import_fungalBiomass_data}
 dat_rb <- read_csv("https://ndownloader.figshare.com/files/21990354")
-
+colnames(dat_fcr)
 skim(dat_rb)
 ```
 
